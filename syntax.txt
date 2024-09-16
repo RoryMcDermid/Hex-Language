@@ -1,0 +1,183 @@
+type Vector = Number x  Number y, Number z
+
+type Any = A --Any is a generic, Any* means a given number of iota, that can either be the same or different
+
+--Basic Patterns
+self :: _ => entity
+
+head_height :: entity => Vector
+
+foot_height :: entity => Vector
+
+looking_direction :: entity => Vector
+
+archer_dstl :: (Vector, Vector) => Vector
+
+architect_dstl :: (Vector, Vector) => Vector
+
+scout_dstl :: (Vector, Vector) => entity
+
+reveal :: T => T
+
+
+stdn_prfn :: entity => entity
+
+pace_prfn :: entity => Vector
+
+
+--Number Literals
+--Ommitted as numbers are native
+
+
+--Mathematics
+--Ommitted as mathematics are native
+
+
+--Stack Manipulation
+
+novices_gambit :: T => _
+
+jesters_gambit :: (A, B) => (B, A) 
+
+rotation_gambit :: (A, B, C) => (B, C, A) 
+
+rotation_gambit_inverse :: (A, B, C) => (C, A, B)
+
+gemini_decomp :: T => (T, T)
+
+prospectors_gambit :: (A, B) => (A, B, A)
+
+undertakers_gambit :: (A, B) => (B, A, B)
+
+gemini_gambit :: (A, Number) => (A*)
+
+dioscuri_gambit :: (A, B) => (A, B, A, B)
+
+flocks_refl :: _ => Number
+
+fishermans_gambit :: Number => T 
+--Removes the iota at the position referenced by Number, not sure how to show that here
+
+fishermans_gambit_copy :: Number => T 
+--Doesn't remove the iota at the position referenced by Number
+
+bookkeepers_gambit :: (T*) => _ 
+--Removes iotas based on how you draw the pattern (not a read in pattern, the bookkeepers_gambit pattern), need to figure out how to show this and fishermans_gambit
+
+swindlers_gambit :: Any* Number => Any*
+--Resorts the top of the list based on the Number input (https://github.com/FallingColors/HexMod/wiki/Table-of-Lehmer-Codes-for-Swindler's-Gambit)
+
+
+--Logical Operations
+
+negation_prfn :: Boolean => Boolean 
+--Written incorrectly in the book, says it is any => Number but only takes in and outputs booleans
+
+augurs_prfn :: T => Boolean 
+--Turns 0, Null and an empty list to False, anything else becomes True
+
+disjunction_dstl :: (Boolean, Boolean) => Boolean 
+
+conjunction_dstl :: (Boolean, Boolean) => Boolean
+
+exclusion_dstl :: (Boolean, Boolean) => Boolean
+
+augurs_exaltation :: (Boolean, A, B) => A | B
+--Returns A or B depending on what the Boolean is
+
+equality_dstl :: (A, B) => Boolean
+--Written incorrectly in the book, says it is A, B => Number but only outputs booleans
+
+inequality_dstl :: (A, B) => Boolean
+--Written incorrectly in the book, says it is A, B => Number but only outputs booleans
+
+maximus_dstl :: (Number, Number) => Boolean
+--Written incorrectly in the book, says it is Number, Number => Number but only outputs booleans
+
+minimus_dstl :: (Number, Number) => Boolean
+--Written incorrectly in the book, says it is Number, Number => Number but only outputs booleans
+
+maximus_dstl_2 :: (Number, Number) => Boolean
+--Written incorrectly in the book, says it is Number, Number => Number but only outputs booleans
+
+minimus_dstl_2 :: (Number, Number) => Boolean
+--Written incorrectly in the book, says it is Number, Number => Number but only outputs booleans
+
+
+--Entities
+
+entity_prfn :: Vector => Entity | Null
+
+entity_prfn_animal :: Vector => Entity | Null
+
+entity_prfn_monster :: Vector => Entity | Null
+
+entity_prfn_item :: Vector => Entity | Null
+
+entity_prfn_player :: Vector => Entity | Null
+
+entity_prfn_living :: Vector => Entity | Null
+
+zone_dstl_animal :: (Vector, Number) => [(Entity | Null)*]
+
+zone_dstl_non_animal :: (Vector, Number) => [(Entity | Null)*]
+
+zone_dstl_monster :: (Vector, Number) => [(Entity | Null)*]
+
+zone_dstl_non_monster :: (Vector, Number) => [(Entity | Null)*]
+
+zone_dstl_item :: (Vector, Number) => [(Entity | Null)*]
+
+zone_dstl_non_item :: (Vector, Number) => [(Entity | Null)*]
+
+zone_dstl_player :: (Vector, Number) => [(Entity | Null)*]
+
+zone_dstl_non_player :: (Vector, Number) => [(Entity | Null)*]
+
+zone_dstl_living :: (Vector, Number) => [(Entity | Null)*]
+
+zone_dstl_non_living :: (Vector, Number) => [(Entity | Null)*]
+
+zone_dstl_any :: (Vector, Number) => [(Entity | Null)*]
+
+
+--List Manipulation
+
+selection_dstl :: ([Any*], Number) => Any
+
+selection_exaltation :: ([Any*], Number) => [Any*]
+
+integration_dstl :: ([Any*], A) => [Any*, A]
+
+combination_dstl :: ([Any*], [Any*]) => [Any*, Any*]
+
+vacant_refl :: _ => []
+
+singles_prfn :: A => [A]
+
+abacus_prfn :: [Any*] => Number
+
+retrograde_prfn :: [Any*] => [Any*]
+
+locators_dstl :: ([Any*], A) => Number
+
+excisors_dstl :: ([Any*], Number) => [Any*]
+
+surgeons_dstl :: ([Any*], Number, A) => [Any*, A, Any*]
+--puts iota A into the Number'th position in the list
+
+flocks_gambit :: (Any*, Number) => [Any*]
+
+flocks_disintegration :: [Any*] => Any*
+
+speakers_dstl :: ([Any*], A) => [A, Any*]
+
+speakers_decomp :: [Any*] => ([Any*], A)
+
+
+-Patterns as Iotas
+
+
+akashas_dstl :: (Vector, Pattern) => T
+
+greater_tlprt :: (entity, Vector) => _
